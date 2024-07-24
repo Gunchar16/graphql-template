@@ -2,18 +2,26 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
+        <Nullable>disable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="HotChocolate" Version="13.9.7" />
         <PackageReference Include="HotChocolate.AspNetCore" Version="13.9.7" />
         <PackageReference Include="HotChocolate.Data" Version="13.9.7" />
+        <PackageReference Include="HotChocolate.Types" Version="13.9.7" />
+        <PackageReference Include="HotChocolate.Types.Shared" Version="13.9.7" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="GraphTypes\Account\Mutation\" />
+      <Folder Include="GraphTypes\UserGType\Mutation\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Application\Application.csproj" />
+      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
